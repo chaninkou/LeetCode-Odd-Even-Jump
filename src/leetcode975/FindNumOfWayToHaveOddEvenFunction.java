@@ -25,8 +25,7 @@ public class FindNumOfWayToHaveOddEvenFunction {
         // Put the last element
         sortedMap.put(A[n], n);
         
-        
-        // Go from 2nd last element to beginning
+        // Go from 2nd to last element to beginning
         for(int i = n - 1; i >= 0; i--){
         	// Ceiling entry will get anything bigger or equal to a number
             Map.Entry high = sortedMap.ceilingEntry(A[i]);
@@ -44,14 +43,13 @@ public class FindNumOfWayToHaveOddEvenFunction {
                 evenLower[i] = oddHigher[(int) low.getValue()];
             }
             
-            // Check if current element could do odd jump
+            // Check if current element could do an odd jump
             if(oddHigher[i]){
                 result++;
             }
             
             // save the input
             sortedMap.put(A[i], i);
-            
         }
         
         return result;
