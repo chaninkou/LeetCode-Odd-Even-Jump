@@ -9,23 +9,24 @@ public class FindNumOfWayToHaveOddEvenFunction {
         
         int n = A.length - 1;
         
-        // if current element could do odd jump
+        // mark true if current element could do odd jump
         boolean[] oddHigher = new boolean[n + 1];
         
-        // if current element could do even jump
+        // mark true if current element could do even jump
         boolean[] evenLower = new boolean[n + 1];
         
-        // At the end of index, it can do even or odd jump
+        // default last element could do even or odd jump
         oddHigher[n] = true;
         evenLower[n] = true;
         
-        // Key will be the element and value will be the index
+        // Key will be the element
+        // value will be the index of element
         TreeMap<Integer, Integer> sortedMap = new TreeMap<>();
         
-        // Put the last element
+        // Put the last element as base case
         sortedMap.put(A[n], n);
         
-        // Go from 2nd to last element to beginning
+        // Go from 2nd to last element to start
         for(int i = n - 1; i >= 0; i--){
         	// Ceiling entry will get anything bigger or equal to a number
             Map.Entry high = sortedMap.ceilingEntry(A[i]);
@@ -45,6 +46,7 @@ public class FindNumOfWayToHaveOddEvenFunction {
             
             // Check if current element could do an odd jump
             if(oddHigher[i]){
+            	// Increase the number of element could start to do even odd jump
                 result++;
             }
             
