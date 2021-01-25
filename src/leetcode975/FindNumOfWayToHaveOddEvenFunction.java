@@ -4,6 +4,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class FindNumOfWayToHaveOddEvenFunction {
+	// odd A[i] <= A[j]
+	// even A[i] >= A[j]
 	public int oddEvenJumps(int[] A) {
         int result = 1;
         
