@@ -28,7 +28,7 @@ public class FindNumOfWayToHaveOddEvenFunction {
         // Put the last element as base case
         sortedMap.put(A[n], n);
         
-        // Go from 2nd to last element to start
+        // start from 2nd last element
         for(int i = n - 1; i >= 0; i--){
         	// Ceiling entry will get anything bigger or equal to a number
             Map.Entry high = sortedMap.ceilingEntry(A[i]);
