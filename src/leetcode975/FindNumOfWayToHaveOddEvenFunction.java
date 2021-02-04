@@ -33,7 +33,7 @@ public class FindNumOfWayToHaveOddEvenFunction {
         	// Ceiling entry will get anything bigger or equal to a number
             Map.Entry high = sortedMap.ceilingEntry(A[i]);
             
-            // Floor entry will get anything small or equal to a number
+            // Floor entry will get anything smaller or equal to a number
             Map.Entry low = sortedMap.floorEntry(A[i]);
             
             // Always check odd first
