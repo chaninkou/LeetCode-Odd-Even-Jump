@@ -11,10 +11,10 @@ public class FindNumOfWayToHaveOddEvenFunction {
         
         int n = A.length - 1;
         
-        // mark true if current element could do odd jump
+        // mark true if current index could do odd jump
         boolean[] oddHigher = new boolean[n + 1];
         
-        // mark true if current element could do even jump
+        // mark true if current index could do even jump
         boolean[] evenLower = new boolean[n + 1];
         
         // default last element could do even or odd jump
